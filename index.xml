@@ -6,17 +6,15 @@
     <description>Recent content on Blog personal de Ángel Luis Mula</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es-ES</language>
-    <managingEditor>almula@gmail.com (Ángel Luis Mula)</managingEditor>
-    <webMaster>almula@gmail.com (Ángel Luis Mula)</webMaster>
     <lastBuildDate>Wed, 30 Nov 2016 18:39:50 +0100</lastBuildDate>
     <atom:link href="https://angelluismula.github.io/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>hello world</title>
-      <link>https://angelluismula.github.io/2016/11/30/hello-world/</link>
+      <link>https://angelluismula.github.io/2016/11/hello-world/</link>
       <pubDate>Wed, 30 Nov 2016 18:39:50 +0100</pubDate>
-      <author>almula@gmail.com (Ángel Luis Mula)</author>
-      <guid>https://angelluismula.github.io/2016/11/30/hello-world/</guid>
+      
+      <guid>https://angelluismula.github.io/2016/11/hello-world/</guid>
       <description>&lt;p&gt;Mi primera entrada hecha con gohugo.io&lt;/p&gt;
 </description>
     </item>
