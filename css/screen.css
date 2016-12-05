@@ -17,6 +17,7 @@
     10. Media Queries (Tablet)
     11. Media Queries (Mobile)
     12. Animations
+    13. Suggestions
 
 */
 
@@ -98,121 +99,6 @@ input::-moz-focus-inner { border: 0; padding: 0; }
 textarea { overflow: auto; vertical-align: top; }
 table { border-collapse: collapse; border-spacing: 0; }
 
-
-.article-gallery {
-  background: #000;
-  position: relative;
-}
-.article-gallery-photos {
-  position: relative;
-  overflow: hidden;
-}
-.article-gallery-img {
-  display: none;
-  max-width: 100%;
-}
-.article-gallery-img:first-child {
-  display: block;
-}
-.article-gallery-img.loaded {
-  position: absolute;
-  display: block;
-}
-.article-gallery-img img {
-  display: block;
-  max-width: 100%;
-  margin: 0 auto;
-}
-
-.article-gallery-welcome {
-  position: absolute;
-  color: white;
-  text-align: center;
-  width: 100%;
-  height: 0%;
-  margin: auto;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  z-index: 51;
-}
-
-#article-nav {
-  position: relative;
-}
-#article-nav:before,
-#article-nav:after {
-  content: "";
-  display: table;
-}
-#article-nav:after {
-  clear: both;
-}
-@media screen and (min-width: 1200px) {
-  #article-nav {
-    margin: 40px 0;
-  }
-  #article-nav:before {
-    width: 8px;
-    height: 8px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-top: -4px;
-    margin-left: -4px;
-    content: "";
-    -webkit-border-radius: 50%;
-    border-radius: 50%;
-    background: #787c81;
-  }
-}
-.article-nav-link-wrap {
-  text-decoration: none;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  margin-top: 40px;
-  text-align: center;
-  display: block;
-}
-.article-nav-link-wrap:hover {
-
-}
-@media screen and (min-width: 1200px) {
-  .article-nav-link-wrap {
-    width: 50%;
-    margin-top: 0;
-  }
-}
-@media screen and (min-width: 1200px) {
-  #article-nav-newer {
-    float: right;
-    text-align: left;
-    padding-left: 20px;
-  }
-}
-@media screen and (min-width: 1200px) {
-  #article-nav-older {
-    float: left;
-    text-align: right;
-    padding-right: 20px;
-  }
-}
-.article-nav-caption {
-  letter-spacing: 2px;
-  line-height: 1em;
-  font-weight: bold;
-  text-transform: uppercase;
-}
-#article-nav-newer .article-nav-caption {
-  margin-right: -2px;
-}
-.article-nav-title {
-  font-size: 0.85em;
-  line-height: 1.6em;
-  margin-top: 0.5em;
-}
 
 /* ==========================================================================
    1. Icons - Sets up the icon font and respective classes
@@ -364,12 +250,12 @@ h6 {
 }
 
 a {
-    color: #3f7fdb;
+    color: #4A4A4A;
     transition: color 0.3s ease;
 }
 
 a:hover {
-    color: #999;
+    color: #111;
 }
 
 p, ul, ol, dl {
@@ -923,7 +809,7 @@ body.nav-opened .nav {
     line-height: 35px;
     white-space: nowrap;
     border-radius: 3px;
-    background: rgba(0,0,0,0.4);
+    background: rgba(0,0,0,0.1);
     transition: all 0.5s ease;
 }
 .menu-button:focus {
@@ -933,17 +819,6 @@ body.nav-opened .nav {
     font-size: 12px;
     margin-right: 6px;
 }
-
-.title-shaded {
-    border: #bfc8cd 1px solid;
-    opacity: 1;
-    color: #9EABB3;
-    border-radius: 3px;
-    background: rgba(0,0,0,0.4);
-    padding-bottom: 10px;
-    max-width: 650px;
-}
-
 
 body.nav-opened .menu-button {
     padding: 0 12px;
@@ -1009,10 +884,10 @@ body.nav-opened .menu-button .word {
     margin: 0;
     font-size: 2rem;
     line-height: 1.5em;
-    font-weight: 600;
+    font-weight: 400;
     font-family: "Merriweather", serif;
     letter-spacing: 0.01rem;
-    color: #fff;
+    color: rgba(255,255,255,0.8);
 }
 
 .no-cover.main-header {
@@ -1085,7 +960,7 @@ body:not(.post-template) .post-title {
 }
 
 .post-title a {
-    /* text-decoration: none; */
+    text-decoration: none;
 }
 
 .post-excerpt p {
@@ -1132,19 +1007,9 @@ body:not(.post-template) .post-title {
 
 .post-date {
     display: inline-block;
-    margin-right: 8px;
-    padding-right: 12px;
-    border-right: #d5dbde 1px solid;
-    text-transform: uppercase;
-    font-size: 1.3rem;
-    white-space: nowrap;
-}
-
-.post-readtime {
-    display: inline-block;
-    margin-right: 8px;
-    padding-right: 12px;
-    border-right: #d5dbde 1px solid;
+    margin-left: 8px;
+    padding-left: 12px;
+    border-left: #d5dbde 1px solid;
     text-transform: uppercase;
     font-size: 1.3rem;
     white-space: nowrap;
@@ -1205,12 +1070,6 @@ body:not(.post-template) .post-title {
 }
 
 .post-template .post-date {
-    padding: 0;
-    margin: 0;
-    border: none;
-}
-
-.post-template .post-readtime {
     padding: 0;
     margin: 0;
     border: none;
@@ -1575,7 +1434,7 @@ body:not(.post-template) .post-title {
     position: relative;
     margin: 8rem 0 0 0;
     padding: 0.5rem 15px;
-    border-top: #EBF2F6 1px solid;
+    /*border-top: #EBF2F6 1px solid;*/
     font-family: "Open Sans", sans-serif;
     font-size: 1rem;
     line-height: 1.75em;
@@ -1762,11 +1621,10 @@ body:not(.post-template) .post-title {
 
     .menu-button {
         padding: 0 5px;
-        border: #bfc8cd 1px solid;
-        opacity: 1;
-        color: #9EABB3;
-        border-radius: 3px;
-        background: rgba(0,0,0,0.4);
+        border-radius: 0;
+        border-color: transparent;
+        color: #2e2e2e;
+        background: transparent;
     }
     .menu-button:hover {
         color: #2e2e2e;
@@ -1825,7 +1683,7 @@ body:not(.post-template) .post-title {
         line-height: 1.65em;
     }
 
-    .post-readtime {
+    .post-date {
         display: none;
     }
 
@@ -1834,10 +1692,6 @@ body:not(.post-template) .post-title {
     }
 
     .post-template .post-date {
-        display: inline-block;
-    }
-
-    .post-template .post-readtime {
         display: inline-block;
     }
 
@@ -2048,6 +1902,165 @@ body:not(.post-template) .post-title {
         -webkit-transform: translateY(-5px) ;
                 transform: translateY(-5px) ;
     }
+}
+
+/* ==========================================================================
+   13. Suggestions - Further Reading Suggestions
+   ========================================================================== */
+.read-next {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: stretch;
+    -webkit-align-items: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+    /*margin-top: 10rem;*/
+}
+
+.read-next-story {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-flex: 1;
+    -webkit-flex-grow: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    min-width: 50%;
+    text-decoration: none;
+    position: relative;
+    text-align: center;
+    color: #fff;
+    background: #222 no-repeat center center;
+    background-size: cover;
+    overflow: hidden;
+}
+.read-next-story:hover:before {
+    background: rgba(0,0,0,0.8);
+    transition: all 0.2s ease;
+}
+.read-next-story:hover .post:before {
+    color: #222;
+    background: #fff;
+    transition: all 0.2s ease;
+}
+
+.read-next-story:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0,0,0,0.7);
+    transition: all 0.5s ease;
+}
+
+.read-next-story .post {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+    border-bottom: none;
+}
+
+.read-next-story .post:before {
+    content: "Read This Next";
+    padding: 4px 10px 5px;
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    font-family: "Open Sans", sans-serif;
+    color: rgba(255,255,255,0.8);
+    border: rgba(255,255,255,0.5) 1px solid;
+    border-radius: 4px;
+    transition: all 0.5s ease;
+}
+.read-next-story.prev .post:before {
+    content: "You Might Enjoy";
+}
+
+.read-next-story h2 {
+    margin-top: 1rem;
+    color: #fff;
+}
+
+.read-next-story p {
+    margin: 0;
+    color: rgba(255,255,255,0.8);
+}
+
+/* Special styles for posts with no cover images */
+.read-next-story.no-cover {
+    background: #f5f8fa;
+}
+
+.read-next-story.no-cover:before {
+    display: none;
+}
+
+.read-next-story.no-cover .post:before {
+    color: rgba(0,0,0,0.5);
+    border-color: rgba(0,0,0,0.2);
+}
+
+.read-next-story.no-cover h2 {
+    color: rgba(0,0,0,0.8);
+}
+
+.read-next-story.no-cover p {
+    color: rgba(0,0,0,0.5);
+}
+
+/* if there are two posts without covers, put a border between them */
+.read-next-story.no-cover + .read-next-story.no-cover {
+    border-left: rgba(0,0,100,0.04) 1px solid;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/* Correctly position site-footer when next to the .read-next container */
+.read-next + .site-footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0;
+}
+
+@media only screen and (max-width: 900px) {
+  .read-next {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    /*margin-top: 4rem;*/
+    margin-top: 0;
+
+  }
+
+  .read-next p {
+    display: none;
+  }
+
+  .read-next-story.no-cover + .read-next-story.no-cover {
+    border-top: rgba(0,0,100,0.06) 1px solid;
+    border-left: none;
+  }
+}
+
+
+@media only screen and (max-width: 500px) {
+  .read-next {
+    margin-top: 0;
+    margin-bottom: -37px;
+  }
+
+  .read-next .post {
+    width: 100%;
+  }
 }
 
 

@@ -20,12 +20,6 @@
             $("body").toggleClass("nav-opened nav-closed");
         });
 
-        if ($.fancybox){
-          $('.fancybox').fancybox();
-          // Add fancy box click here tag
-          $(".article-gallery-welcome").text("[Click here to open image gallery]");
-        }
-        
     });
 
     // Arctic Scroll by Paul Adam Davis
